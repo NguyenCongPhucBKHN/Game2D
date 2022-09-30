@@ -11,13 +11,11 @@ public class Projectile : MonoBehaviour
      {
         if(collision.tag == "Ground")
         {  
-            Debug.Log("Dan cham dat");
             Destroy(gameObject);
         }
         
         if(collision.tag == "Player")
         {  
-            Debug.Log("Dan cham player");
             GameObject hitFX = Instantiate(hitVFX, transform.position, transform.rotation);
             Destroy(gameObject);
         }
